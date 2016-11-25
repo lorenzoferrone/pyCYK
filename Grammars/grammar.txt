@@ -1,0 +1,73 @@
+rules = [rule("S", ("NP", "VP"), prob=0.8 ),
+             rule("S", ("X1", "VP"), prob=0.15 ),
+             rule("S", ("X2", "PP")),
+             rule("S", ("V", "NP")),
+             rule("S", ("V", "PP")),
+             rule("S", ("VP", "PP")),
+             #rule("S", ("VP",)),
+             rule("S", ("book",)),
+             rule("S", ("include",)),
+             rule("S", ("prefer",)),
+
+             rule("NP", ("DET", "NOM",), prob=0.2 ),
+             rule("NP", ("TWA",)),
+             rule("NP", ("HOUSTON",)),
+             rule("NP", ("me",)),
+             rule("NP", ("she",)),
+             rule("NP", ("I",)),
+
+             rule("NOM", ("NOM", "N")),
+             rule("NOM", ("NOM", "PP")),
+             rule("NOM", ("book",)),
+             rule("NOM", ("flight",)),
+             rule("NOM", ("meal",)),
+             rule("NOM", ("money",)),
+             rule("NOM", ("morning",)),
+
+             rule("X1", ("AUX", "NP"), prob=0.15 ),
+             rule("X2", ("V", "NP")),
+
+             rule("VP", ("V", "NP"), prob=0.4 ),
+             rule("VP", ("X2", "PP")),
+             rule("VP", ("V", "PP")),
+             rule("VP", ("VP", "PP")),
+
+             rule("VP", ("book",)),
+             rule("VP", ("include",)),
+             rule("VP", ("prefer",)),
+
+             rule("PP", ("P", "NP")),
+
+             rule("DET", ("that",), prob=0.05 ),
+             rule("DET", ("this",), prob=0.05 ),
+             rule("DET", ("a",), prob=0.15 ),
+             rule("DET", ("the",), prob=0.8 ),
+
+             rule("N", ("book",)),
+             rule("N", ("flight",)),
+             rule("N", ("meal",)),
+             rule("N", ("money",)),
+             rule("N", ("fish",)),
+             rule("N", ("fork",)),
+             rule("N", ("morning",)),
+
+             rule("V", ("book",)),
+             rule("V", ("include",)),
+             rule("V", ("prefer",)),
+             rule("V", ("fish",)),
+
+             rule("PRO", ("me",)),
+             rule("PRO", ("she",)),
+             rule("PRO", ("I",)),
+
+             rule("PR-N", ("TWA",)),
+             rule("PR-N", ("HOUSTON",)),
+
+             rule("AUX", ("does",)),
+
+             rule("P", ("from",)),
+             rule("P", ("to",)),
+             rule("P", ("on",)),
+             rule("P", ("near",)),
+             rule("P", ("through",)),
+        ]
